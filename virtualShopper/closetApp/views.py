@@ -70,7 +70,7 @@ def add_clothes(request):
 	else:
 		form = ClothingForm()
 
-	return render(request, 'add_Clothes.html', {'form':form})
+	return render(request, 'addClothes.html', {'form':form})
 @login_required
 def user_logout(request):
 	logout(request)
