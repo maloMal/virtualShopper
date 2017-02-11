@@ -60,17 +60,17 @@ def user_login(request):
 		return render(request, 'loginPage.html', {})
 
 def add_clothes(request):
-		if request.method == 'POST':
-			form = ClothingForm(request.POST)
+	if request.method == 'POST':
+		form = ClothingForm(request.POST)
 		if form.is_valid():
 			form.save(commit=True)
 			return index(request)
 		else:
 			print form.errors
-		else:
-			form = CategoryForm()
+	else:
+		form = CategoryForm()
 
-return render(request, 'add_category.html', {'form':form})
+	return render(request, 'add_category.html', {'form':form})
 @login_required
 def user_logout(request):
 	logout(request)
