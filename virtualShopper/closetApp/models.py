@@ -6,6 +6,7 @@ import random
 
 class UserProfile(models.Model):
 	user = models.OneToOneField(User)
+	username = models.CharField(max_length=128, default="mal")
 
 	def __unicode__(self):
 		self.user.username

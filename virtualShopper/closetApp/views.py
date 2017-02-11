@@ -33,10 +33,10 @@ def register(request):
 		else:
 			print user_form.errors, profile_form.errors
 	else:
-		user_form = UserForm()
-		profile_form = UserProfileForm()
+		user_form = UserProfileForm()
+		#profile_form = UserProfileForm()
 	return render(request, 'register.html', {'user_form':user_form,
-											'profile_form':profile_form,
+											#'profile_form':profile_form,
 											'registered':registered})
 
 
@@ -68,7 +68,7 @@ def add_clothes(request):
 		else:
 			print form.errors
 	else:
-		form = CategoryForm()
+		form = ClothingForm()
 
 	return render(request, 'add_category.html', {'form':form})
 @login_required
