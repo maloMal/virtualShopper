@@ -23,6 +23,9 @@ class ClothingType(models.Model):
 	color = models.CharField(max_length=128, unique=True)
 	season = models.CharField(max_length=128, unique=True)
 
+	def __unicode__(self):
+		return self.name
+
 #class Size(models.Model):
 #	name = models.CharField(max_length=128, unique=True)
 

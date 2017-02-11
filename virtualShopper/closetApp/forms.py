@@ -7,13 +7,14 @@ from django.contrib.auth.models import User
 
 class UserProfileForm(forms.ModelForm):
 	class Meta:
-		model = UserProfile
+		model = User
 		fields = ('username', 'password', 'email')
 
 
 class ClothingForm(forms.ModelForm):
 	class Meta:
 		model = ClothingType
+		fields = ('name', )
 
 class ContactForm(forms.Form):
 	name = forms.CharField(required=True)

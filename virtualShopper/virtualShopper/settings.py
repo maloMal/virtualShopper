@@ -56,7 +56,7 @@ WSGI_APPLICATION = 'virtualShopper.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+TEMPLATE_PATH = os.path.join(BASE_DIR,'templates')
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
     )
